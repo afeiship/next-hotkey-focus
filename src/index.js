@@ -13,7 +13,6 @@
       var keys = options.keys.join();
       var els = nx.slice(document.querySelectorAll(options.selector));
       hotkeys(keys, function (event, handler) {
-        console.log('focus?');
         els.forEach(function (el) {
           el.focus();
           options.callback({ event: event, handler: handler });
