@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotkeys</title>
+  <style>
+    input[data-hotkey-focus] {
+      width: 80%;
+      height: 30px;
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin: 50px auto;
+    }
+
+    input[data-hotkey-focus]:focus {
+      outline: 5px solid #a2c7ee;
+    }
+
+    .focus-label {
+      font-size: 100px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 28%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input placeholder="Welcome to use search..." type="text" name="" id="" data-hotkey-focus>
+  <span hidden class="focus-label">Focused!</span>
+
+  <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+  <script src="../node_modules/@jswork//next/dist/index.js"></script>
+  <script src="../src/index.js"></script>
+  <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+      var el = document.querySelector('.focus-label')
+      nx.hotkeyFocus({
+        keys: ['cmd + k'], callback: (e) => {
+          el.style.display = "block";
+          console.log(e);
+        }
+      })
+    })
+  </script>
+
+</body>
+
+</html>
