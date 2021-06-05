@@ -8,12 +8,10 @@
   nx.hotkeyFocus = function (inOptions) {
     var options = nx.mix(null, defaults, inOptions);
     var keys = options.keys.join();
-    var els = nx.slice(document.querySelectorAll(options.selector));
+    var el = document.querySelector(options.selector);
     hotkeys(keys, function (event, handler) {
-      els.forEach(function (el) {
-        el.focus();
-        options.callback({ event: event, handler: handler });
-      });
+      el.focus();
+      options.callback({ event: event, handler: handler });
     });
   };
 

@@ -17,12 +17,11 @@ import '@jswork/next-hotkey-focus';
 
 // Make sure selector elements are loaded.
 window.addEventListener("DOMContentLoaded", () => {
-  var el = document.querySelector('.focus-label')
   nx.hotkeyFocus({
     keys: ['cmd + k'], 
+    selector:'input[data-hotkey-focus]',
     callback: (e) => {
-      el.style.display = "block";
-      console.log(e);
+      console.log('focued!');
     }
   })
 })
