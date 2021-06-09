@@ -19,7 +19,7 @@ import '@jswork/next-hotkey-focus';
 window.addEventListener("DOMContentLoaded", () => {
   nx.hotkeyFocus({
     keys: ['cmd + k'], 
-    selector:'input[data-hotkey-focus]',
+    selectors: ['input[data-hotkey-focus]'],
     callback: (e) => {
       console.log('focued!');
     }
