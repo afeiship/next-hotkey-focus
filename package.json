@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-hotkey-focus",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Manage elements focus by hotkey.",
   "homepage": "https://github.com/afeiship/next-hotkey-focus",
   "author": {
